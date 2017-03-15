@@ -9,7 +9,7 @@ program
   .option('-p, --port <port>', 'path or name of serial port')
 	.option('--socket-port <port>', 'socket port (default: 8000)', 8000)
   .option('-b, --baudrate <baudrate>', 'baud rate (default: 115200)', 115200)
-	.option('--controller-type <type>', 'controller type: Grbl|Smoothie|TinyG (default: Grbl)', 'TinyG')
+	.option('--controller-type <type>', 'controller type: Grbl|Smoothie|TinyG (default: TinyG)', 'TinyG')
 
 program.parse(process.argv);
 

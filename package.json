@@ -31,6 +31,7 @@
   "dependencies": {
     "commander": "^2.9.0",
     "inquirer": "^3.0.1",
+    "johnny-five": "^0.10.6",
     "jsonwebtoken": "^7.2.1",
     "lodash.get": "^4.4.2",
     "serialport": "^4.0.7",

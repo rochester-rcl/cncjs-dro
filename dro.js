@@ -28,6 +28,7 @@ class DRO {
   initBoard() {
     this.board = new five.Board({ io: new rip() });
     this.board.on("ready", () => {
+      console.log("board is on");
       this.lcd = new five.LCD({
         pins: ["GPIO26", "GPIO19", "GPIO13", "GPIO6", "GPIO5", "GPIO11"],
         backlight: 10,
@@ -73,7 +74,8 @@ class DRO {
         this.socket.emit('open', this.cncConfig.port, {
           baudrate: this.cncConfig.baudrate,
           controllerType: this.cncConfig.controllerType,
-        })
+        });
+        this.initBoard();
       });
     });
     this.socket.on('error', (error) => { console.log('error!',error); });

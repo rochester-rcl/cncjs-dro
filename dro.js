@@ -4,6 +4,8 @@ const path = require('path');
 const io = require('socket.io-client');
 const jwt = require('jsonwebtoken');
 const get = require('lodash.get');
+const five = require('johnny-five');
+const rpi = require('raspi-io');
 
 class DRO {
   constructor(options) {
@@ -21,6 +23,19 @@ class DRO {
         'query': 'token=' + this.cncConfig.token
     });
     this.bindEvents();
+  }
+
+  initBoard() {
+    this.board = new five.Board({ io: new rip() });
+    this.board.on("ready", () => {
+      this.lcd = new five.LCD({
+        pins: ["GPIO26", "GPIO19", "GPIO13", "GPIO6", "GPIO5", "GPIO11"],
+        backlight: 10,
+        rows: 2,
+        cols: 16
+      });
+    });
+    this.lcd.display();
   }
 
   userHome() {

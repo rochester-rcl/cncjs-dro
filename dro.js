@@ -26,7 +26,7 @@ class DRO {
   }
 
   initBoard() {
-    this.board = new five.Board({ io: new rip() });
+    this.board = new five.Board({ io: new rpi() });
     this.board.on("ready", () => {
       console.log("board is on");
       this.lcd = new five.LCD({

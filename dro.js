@@ -31,7 +31,6 @@ class DRO {
       console.log("board is on");
       this.lcd = new five.LCD({
         pins: ["GPIO26", "GPIO19", "GPIO13", "GPIO6", "GPIO5", "GPIO11"],
-        backlight: 10,
         rows: 2,
         cols: 16
       });

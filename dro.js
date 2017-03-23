@@ -35,8 +35,9 @@ class DRO {
         rows: 2,
         cols: 16
       });
+      this.lcd.display();
     });
-    this.lcd.display();
+
   }
 
   userHome() {

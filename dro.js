@@ -44,7 +44,7 @@ class DRO {
   }
 
   getSecret() {
-    const cncrc = path.resolve(this.userHome() + '/.cncrc');
+    const cncrc = path.resolve('/home/pi/.cncrc');
     try {
         const config = JSON.parse(fs.readFileSync(cncrc, 'utf8'));
         return config.secret;

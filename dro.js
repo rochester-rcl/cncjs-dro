@@ -36,6 +36,7 @@ class DRO {
         cols: 16
       });
       console.log(this.lcd);
+      this.lcd.on();
       this.lcd.clear();
       this.lcd.cursor(0,0);
       this.lcd.print("Hi");

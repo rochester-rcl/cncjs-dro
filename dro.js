@@ -4,7 +4,7 @@ const path = require('path');
 const io = require('socket.io-client');
 const jwt = require('jsonwebtoken');
 const get = require('lodash.get');
-const five = require('johnny-five');
+const five = require('johnny-five'),board,lcd;
 const rpi = require('raspi-io');
 
 class DRO {

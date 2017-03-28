@@ -30,8 +30,8 @@ class DRO {
     this.board.on("ready", () => {
       console.log("board is on");
       this.lcd = new five.LCD({
-        pins: ["GPIO26", "GPIO19", "GPIO13", "GPIO6", "GPIO5", "GPIO11"],
-        backlight: 10,
+        pins: ["P1-37", "P1-35", "P1-23", "P1-29", "P1-31", "P1-33"],
+        //backlight: 10,
         rows: 2,
         cols: 16
       });

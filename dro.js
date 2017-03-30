@@ -66,6 +66,10 @@ class DRO {
 
   setMachinePOS(data) {
     const { x, y, z } = data.sr.wpos;
+    if (this.lcd) {
+      this.lcd.clear();
+      this.lcd.print(x, y);
+    }
     console.log(x,y,z);
   }
 

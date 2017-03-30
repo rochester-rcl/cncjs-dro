@@ -37,7 +37,6 @@ class DRO {
       });
       this.lcd.cursor(0,0);
       this.lcd.clear();
-      this.lcd.print("hello");
     });
 
   }
@@ -68,9 +67,11 @@ class DRO {
     const { x, y, z } = data.sr.wpos;
     if (this.lcd) {
       this.lcd.clear();
-      this.lcd.print(x, y);
+      this.lcd.cursor(0,0);
+      this.lcd.print("X: " + x);
+      this.lcd.cursor(1,0);
+      this.lcd.print("Y: " + y);
     }
-    console.log(x,y,z);
   }
 
   bindEvents() {

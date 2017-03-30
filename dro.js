@@ -68,9 +68,9 @@ class DRO {
     if (this.lcd) {
       this.lcd.clear();
       this.lcd.cursor(0,0);
-      this.lcd.print("X: " + parseFloat(x));
+      this.lcd.print("X: " + x.toFixed(3));
       this.lcd.cursor(1,0);
-      this.lcd.print("Y: " + parseFloat(y));
+      this.lcd.print("Y: " + y.toFixed(3));
     }
   }
 

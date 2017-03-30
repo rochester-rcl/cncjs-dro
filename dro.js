@@ -64,13 +64,13 @@ class DRO {
   }
 
   setMachinePOS(data) {
-    const { x, y, z } = data.sr.wpos;
+    const { x, y } = data.sr.wpos;
     if (this.lcd) {
       this.lcd.clear();
       this.lcd.cursor(0,0);
-      this.lcd.print("X: " + x);
+      this.lcd.print("X: " + parseFloat(x));
       this.lcd.cursor(1,0);
-      this.lcd.print("Y: " + y);
+      this.lcd.print("Y: " + parseFloat(y));
     }
   }
 

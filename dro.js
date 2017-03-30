@@ -36,6 +36,7 @@ class DRO {
         cols: 16
       });
       this.lcd.cursor(0,0);
+      this.lcd.clear();
       this.lcd.print("hello");
     });
 
